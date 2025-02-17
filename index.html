@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Historia de Argelia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="footer" id="footer">
+        <a href="index.html" class="home-link">
+            <img src="img/home.png" alt="Home Icon" class="img-home">Inicio
+        </a>
+        <div class="footer-right">
+            <a href="https://portal.edu.gva.es/iesradioexterior/"><img src="img/ies.png" alt="IES Icon" class="img-ies"></a>
+            <a href="https://www.erasmusplus.es/"><img src="img/download.png" alt="Erasmus Icon" class="img-sepie"></a>
+            <a href="https://www.gva.es/es/inicio/presentacion"><img src="img/logo_gva_pla_recuperem_rec.png" alt="Gen Valenciana Icon" class="img-recuperem"></a>
+        </div>
+        <button id="footerToggle" class="footer-toggle">▲</button>
+    </div>
+    <div class="header">La Historia De Argelia</u></div>
+    <duv class="img">
+        <img src="img/Flag_of_Algeria.svg.png" alt="Argelia" class="img-flag-dz">
+    <div class="text"><strong><u>REPÚBLICA DEMOCRÁCTICA POPULAR DE ARGELIA:</u></strong><br>
+        <br>
+        Capital: Argel<br>
+        <br>
+        Área: 2.381.741 kilómetros cuadrados<br>
+        <br>
+        Población: 47,5 millones<br>
+        <br>
+        Idiomas: árabe, tamazight y francés.<br>
+        <br>
+        Esperanza de vida: 75-78 años</div>
+    <div class="text"><strong><u>Cronología histórica:</strong></u></div>
+    <div class="timeline">
+        <div class="timeline-item left">Argelia prehistórica (Antes del 3000 a.C.)</div>
+        <div class="timeline-item right">Argelia antigua (3000 a.C. – 429 d.C.)</div>
+        <div class="timeline-item left">Dominación romana y bizantina (429–647 d.C.) </div>
+        <div class="timeline-item right">Conquista islámica y dinastías bereberes (647–1516 d.C.)</div>
+        <div class="timeline-item left">Argelia otomana (1516–1830 d.C.)</div>
+        <div class="timeline-item right">Colonización francesa (1830–1962 d.C.)</div>
+        <div class="timeline-item left">Guerra de Independencia (1954–1962 d.C.)</div>
+        <div class="timeline-item right">Argelia post-independencia (1962–1991 d.C.)</div>
+        <div class="timeline-item left">Guerra civil argelina (1991–2002 d.C.)</div>
+        <div class="timeline-item right">Argelia contemporánea (2002–Presente)</div>
+    </div>
+    <div class="text">
+        <strong><u>Resumen sobre Argelia:<br></u></strong>
+        <br>
+        Argelia es el país más grande de África, ubicado en el norte del continente, con una costa en el mar Mediterráneo y una vasta extensión desértica en el Sahara. Su capital es Argel, y el país tiene una población de más de 47,5 millones de habitantes.
+    </div>
+    <div class="hyperlink">
+        <a href="https://es.wikipedia.org/wiki/Argelia">Haga clic aquí para aprender más sobre Argelia</a>
+    </div> 
+
+    <div class="bottom-footer">
+        Desarrollador principal: Amine Mansouri <br>
+        <br>
+        Asistentes del desarrollador: Said Rezki, Samy Arbadji, Islam Nazim.
+    </div>
+
+    <script>
+        function activateTimelineItems() {
+            let items = document.querySelectorAll(".timeline-item");
+            let triggerBottom = window.innerHeight * 0.8;
+
+            items.forEach(item => {
+                let itemTop = item.getBoundingClientRect().top;
+                if (itemTop < triggerBottom) {
+                    item.classList.add("active");
+                }
+            });
+        }
+
+        document.addEventListener("scroll", () => requestAnimationFrame(activateTimelineItems));
+        document.addEventListener("DOMContentLoaded", activateTimelineItems);
+        const footerToggle = document.getElementById('footerToggle');
+    const footer = document.getElementById('footer');
+    
+    footerToggle.addEventListener('click', () => {
+        footer.classList.toggle('hidden');
+        footerToggle.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>
